@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
-kind: mise-en-production
+kind: Application
 metadata:
-  name: ensae-mlops
+  name: fraud-detection
 spec:
   project: default
   source:
@@ -14,3 +14,4 @@ spec:
   syncPolicy:
     automated:
       selfHeal: true
+      prune: true

@@ -17,5 +17,6 @@ spec:
       containers:
       - name: fraud-detection
         image: remiguy/mise-en-prod-fraud:v0.0.3
+        imagePullPolicy: Always
         ports:
         - containerPort: 8000
