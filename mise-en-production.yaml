@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: mise-en-production
+metadata:
+  name: ensae-mlops
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/remi-guy/mise-en-production-deployment.git
+    targetRevision: main
+    path: deployment
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: user-remiguy
+  syncPolicy:
+    automated:
+      selfHeal: true
