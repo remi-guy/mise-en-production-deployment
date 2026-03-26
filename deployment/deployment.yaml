@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: fraud-detection
-        image: remiguy/mise-en-prod-fraud:latest
+        image: remiguy/mise-en-prod-fraud:v0.0.2
         ports:
         - containerPort: 8000
